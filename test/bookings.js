@@ -4,11 +4,9 @@ import { expect } from 'chai';
 //import assert from 'assert';
 import assert from 'chai';
 //import { expect } from 'chai';
-//test comment
 
 const TOKEN = '0267bb830c6dd5e';
 
-//418, unfriendly to automation
 it('GET /booking', () =>{
         // Make a GET request to get all bookings
         return request
@@ -17,23 +15,23 @@ it('GET /booking', () =>{
         .then((res) => {
          // assert data being return to not be empty
          expect(res.body.data).to.not.be.null;
-         //console.log(res.body);
+         console.log(res.body.data);
        });
       });
 
-      it('GET /booking/:id', () =>{
-        // Make a GET request to get all bookings
-        return request
-        .get('/booking/4172')
-        //.send(data)
-        .expect(200)
-        .then((res) => {
-         // assert data being return to not be empty
-         expect(res.body.data).to.not.be.null;
-         console.log(res.body);
-        //  res.body.data.forEach((data) => {
-        //         expect(data.firstname).to.eq('Edgar');
-        //  });
-         //expect(res.body.data.firstname).eq('Edgar');
-       });
-      });
+      // it('GET /booking/:id', () =>{
+      //   // Make a GET request to get all bookings
+      //   return request
+      //   .get('/booking/4172')
+      //   //.send(data)
+      //   .expect(200)
+      //   .then((res) => {
+      //    // assert data being return to not be empty
+      //    expect(res.body.data).to.not.be.null;
+      //    console.log(res.body);
+      //   //  res.body.data.forEach((data) => {
+      //   //         expect(data.firstname).to.eq('Edgar');
+      //   //  });
+      //    //expect(res.body.data.firstname).eq('Edgar');
+      //  });
+      // });
